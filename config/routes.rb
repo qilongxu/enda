@@ -1,4 +1,6 @@
 Enda::Application.routes.draw do |map|
+  resources :posts
+
   resources :users
 
   # The priority is based upon order of creation:

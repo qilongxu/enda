@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  <div class="user_form">
+    <p>First Name <%=f.text_field :first_name %></p>
+    <p>Last Name <%=f.text_field :last_name %></p>
+    <p>Email <%=f.text_field :email %></p>
+  </div>
 
   <div class="actions">
     <%= f.submit %>

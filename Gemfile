@@ -7,6 +7,11 @@ gem 'rails', '3.0.0.beta4'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
+#Bundle the extra gems:
+
+#gem 'will_paginate',  '3.0.pre'
+gem 'paperclip',      :git      => 'http://github.com/thoughtbot/paperclip.git',
+                      :ref      => '35a37d'
 # Use unicorn as the web server
 # gem 'unicorn'
 
