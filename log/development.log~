@@ -1,0 +1,163 @@
+
+
+Started GET "/posts/4" for 127.0.0.1 at Mon Jun 28 22:13:28 -0400 2010
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 4) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 40ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Mon Jun 28 22:13:46 -0400 2010
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 46ms (Views: 30.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/5/edit" for 127.0.0.1 at Mon Jun 28 22:13:48 -0400 2010
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 5) LIMIT 1
+Rendered posts/_form.html.erb (19.7ms)
+Rendered posts/edit.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 48ms (Views: 31.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts/5" for 127.0.0.1 at Mon Jun 28 22:13:53 -0400 2010
+  Processing by PostsController#update as HTML
+  Parameters: {"commit"=>"Update Post", "post"=>{"running_title"=>"sssssss", "title"=>"jjie", "published"=>"0", "content"=>""}, "authenticity_token"=>"Dqd046VVj5ceIcYXrUwZbT3WepjID7aFFQcrpJiF7cs=", "id"=>"5"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 5) LIMIT 1[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 33ms
+
+
+Started GET "/posts/5" for 127.0.0.1 at Mon Jun 28 22:13:53 -0400 2010
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 5) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 37ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at Mon Jun 28 22:19:22 -0400 2010
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 5) LIMIT 1[0m
+Rendered posts/show.html.erb within layouts/application (118.7ms)
+Completed 200 OK in 140ms (Views: 123.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Mon Jun 28 22:19:26 -0400 2010
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts"
+Rendered posts/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 47ms (Views: 31.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/5" for 127.0.0.1 at Mon Jun 28 22:19:28 -0400 2010
+  Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Dqd046VVj5ceIcYXrUwZbT3WepjID7aFFQcrpJiF7cs=", "id"=>"5"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "posts" WHERE ("posts"."id" = 5)
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 123ms
+
+
+Started GET "/posts" for 127.0.0.1 at Mon Jun 28 22:19:29 -0400 2010
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered posts/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 150ms (Views: 29.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at Mon Jun 28 22:19:37 -0400 2010
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (19.3ms)
+Rendered posts/new.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 42ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at Mon Jun 28 22:19:46 -0400 2010
+  Processing by PostsController#create as HTML
+  Parameters: {"commit"=>"Create Post", "post"=>{"running_title"=>"ggggggggggg", "title"=>"dsssssssss", "published"=>"0", "content"=>""}, "authenticity_token"=>"Dqd046VVj5ceIcYXrUwZbT3WepjID7aFFQcrpJiF7cs="}
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("catgory_id", "comments_count", "content", "created_at", "published", "running_title", "tag_id", "title", "updated_at", "user_id") VALUES (NULL, NULL, '', '2010-06-29 02:19:46.227312', 'f', 'ggggggggggg', NULL, 'dsssssssss', '2010-06-29 02:19:46.227312', NULL)
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 77ms
+
+
+Started GET "/posts/6" for 127.0.0.1 at Mon Jun 28 22:19:46 -0400 2010
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1[0m
+Rendered posts/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 44ms (Views: 21.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at Mon Jun 28 22:20:34 -0400 2010
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1
+Rendered posts/_form.html.erb (20.6ms)
+Rendered posts/edit.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 50ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at Mon Jun 28 22:21:51 -0400 2010
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1[0m
+Rendered posts/_form.html.erb (19.7ms)
+Rendered posts/edit.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 78ms (Views: 37.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/6" for 127.0.0.1 at Mon Jun 28 22:21:57 -0400 2010
+  Processing by PostsController#update as HTML
+  Parameters: {"commit"=>"Update Post", "post"=>{"running_title"=>"ggggggggggg", "title"=>"dsssssssss", "published"=>"0", "content"=>"dggggggggggggggggggggggrtttttttttth"}, "authenticity_token"=>"Dqd046VVj5ceIcYXrUwZbT3WepjID7aFFQcrpJiF7cs=", "id"=>"6"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "content" = 'dggggggggggggggggggggggrtttttttttth', "updated_at" = '2010-06-29 02:21:57.519644' WHERE ("posts"."id" = 6)[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 86ms
+
+
+Started GET "/posts/6" for 127.0.0.1 at Mon Jun 28 22:21:57 -0400 2010
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 42ms (Views: 21.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at Mon Jun 28 22:22:01 -0400 2010
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1[0m
+Rendered posts/_form.html.erb (20.4ms)
+Rendered posts/edit.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 96ms (Views: 55.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at Mon Jun 28 22:22:54 -0400 2010
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1
+Rendered posts/_form.html.erb (20.4ms)
+Rendered posts/edit.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 50ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts/6" for 127.0.0.1 at Mon Jun 28 22:23:21 -0400 2010
+  Processing by PostsController#update as HTML
+  Parameters: {"commit"=>"Update Post", "post"=>{"running_title"=>"ggggggggggg", "title"=>"dsssssssss", "published"=>"0", "content"=>"dggggggggggggggggggggggrtttttttttth"}, "authenticity_token"=>"Dqd046VVj5ceIcYXrUwZbT3WepjID7aFFQcrpJiF7cs=", "id"=>"6"}
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 32ms
+
+
+Started GET "/posts/6" for 127.0.0.1 at Mon Jun 28 22:23:21 -0400 2010
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT "posts".* FROM "posts" WHERE ("posts"."id" = 6) LIMIT 1
+Rendered posts/show.html.erb within layouts/application (146.8ms)
+Completed 200 OK in 169ms (Views: 151.7ms | ActiveRecord: 0.4ms)

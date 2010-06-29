@@ -1,13 +1,12 @@
 
 class PostsController < ApplicationController
   
-  uses_tiny_mce :options => {
-                              :theme => 'advanced',
-			      :element_format => 'html',
-                              :theme_advanced_resizing => true,
-                              :theme_advanced_resize_horizontal => false,
-                              :plugins => %w{ table fullscreen }
-                            }
+  #uses_tiny_mce :options => {
+  #                            :theme => 'advanced',
+   #                           :theme_advanced_resizing => true,
+  #                            :theme_advanced_resize_horizontal => false,
+   #                           :plugins => %w{ table fullscreen }
+   #                         }
 
 
   # GET /posts

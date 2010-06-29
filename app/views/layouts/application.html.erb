@@ -5,14 +5,63 @@
   <%= stylesheet_link_tag :all %>
 <%= include_tiny_mce_if_needed %>
 
+<%= javascript_include_tag 'jquery' %>
+<%= javascript_include_tag 'rails' %>
+<%= csrf_meta_tag %>
+<!-- Skin CSS file -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/assets/skins/sam/skin.css">
+<!-- Utility Dependencies -->
+<script src="http://yui.yahooapis.com/2.8.1/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
+<script src="http://yui.yahooapis.com/2.8.1/build/element/element-min.js"></script> 
+<!-- Needed for Menus, Buttons and Overlays used in the Toolbar -->
+<script src="http://yui.yahooapis.com/2.8.1/build/container/container_core-min.js"></script>
+<script src="http://yui.yahooapis.com/2.8.1/build/menu/menu-min.js"></script>
+<script src="http://yui.yahooapis.com/2.8.1/build/button/button-min.js"></script>
+<!-- Source file for Rich Text Editor-->
+<script src="http://yui.yahooapis.com/2.8.1/build/editor/editor-min.js"></script>
 
-  <%= csrf_meta_tag %>
+
+
+
+  <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $("#alert").click(function() {
+          alert(this.getAttribute("data-message"));
+          return false;
+        })
+      })
+    </script>
+
+<script>
+
+var myEditor = new YAHOO.widget.Editor('yahoou', {
+    height: '300px',
+    width: '582px',
+    handleSubmit: true,
+    dompath: true, //Turns on the bar at the bottom
+    animate: false //Animates the opening, closing and moving of Editor windows
+});
+myEditor.render();
+
+</script>
+
+
 </head>
-<body>
+
+<body class="yui-skin-sam">
+
+<h1><a href="#" id="alert" data-message="Hello UJS!">Click Here</a></h1>
+ 	<p>
+  If you click on this paragraph
+  you'll see it just fade away.
+  </p>
+<script>
+  $("p").click(function () {
+  $("p").fadeOut("slow");
+  });
+  </script>
 
 <%= yield %>
-<%= javascript_include_tag 'jquery/jquery-1.4.2.min' %>
-<%= javascript_include_tag :all, :cache => true %>
 
 </body>
 </html>

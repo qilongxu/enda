@@ -2,10 +2,9 @@
 <p id="notice"><%= notice %></p>
 
 <div>
-<p><img src="http://weblogs.baltimoresun.com/business/consuminginterests/blog/apple-logo1.jpg" alt="" width="397" height="480" /></p>
 <p>Title: <%=@post.title %></p>
 <p>Running Title: <%=@post.running_title %></p>
-<p>Content:<br /> <%= @post.content -%></p>
+<p>Content:<br /> <%=raw @post.content %></p>
 <p>Published: <%=@post.published? %></p>
 </div>
 <%= link_to 'Edit', edit_post_path(@post) %> |

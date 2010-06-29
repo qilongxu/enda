@@ -4,13 +4,13 @@ jQuery(function ($) {
 
     $.fn.extend({
         /**
-* Triggers a custom event on an element and returns the event result
-* this is used to get around not being able to ensure callbacks are placed
-* at the end of the chain.
-*
-* TODO: deprecate with jQuery 1.4.2 release, in favor of subscribing to our
-* own events and placing ourselves at the end of the chain.
-*/
+         * Triggers a custom event on an element and returns the event result
+         * this is used to get around not being able to ensure callbacks are placed
+         * at the end of the chain.
+         *
+         * TODO: deprecate with jQuery 1.4.2 release, in favor of subscribing to our
+         *       own events and placing ourselves at the end of the chain.
+         */
         triggerAndReturn: function (name, data) {
             var event = new $.Event(name);
             this.trigger(event, data);
@@ -19,13 +19,13 @@ jQuery(function ($) {
         },
 
         /**
-* Handles execution of remote calls firing overridable events along the way
-*/
+         * Handles execution of remote calls firing overridable events along the way
+         */
         callRemote: function () {
-            var el = this,
-                method = el.attr('method') || el.attr('data-method') || 'GET',
-                url = el.attr('action') || el.attr('href'),
-                dataType = el.attr('data-type') || 'script';
+            var el      = this,
+                method  = el.attr('method') || el.attr('data-method') || 'GET',
+                url     = el.attr('action') || el.attr('href'),
+                dataType  = el.attr('data-type')  || 'script';
 
             if (url === undefined) {
               throw "No URL specified for remote call (action or href must be present).";
@@ -58,8 +58,8 @@ jQuery(function ($) {
     });
 
     /**
-* confirmation handler
-*/
+     *  confirmation handler
+     */
     $('a[data-confirm],input[data-confirm]').live('click', function () {
         var el = $(this);
         if (el.triggerAndReturn('confirm')) {
@@ -71,8 +71,8 @@ jQuery(function ($) {
 
 
     /**
-* remote handlers
-*/
+     * remote handlers
+     */
     $('form[data-remote]').live('submit', function (e) {
         $(this).callRemote();
         e.preventDefault();
@@ -103,8 +103,8 @@ jQuery(function ($) {
     });
 
     /**
-* disable-with handlers
-*/
+     * disable-with handlers
+     */
     var disable_with_input_selector = 'input[data-disable-with]';
     var disable_with_form_selector = 'form[data-remote]:has(' + disable_with_input_selector + ')';
 
@@ -125,4 +125,3 @@ jQuery(function ($) {
         });
     });
 });
-

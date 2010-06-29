@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   
   uses_tiny_mce :options => {
                               :theme => 'advanced',
-			      :element_format : "html",
                               :theme_advanced_resizing => true,
                               :theme_advanced_resize_horizontal => false,
                               :plugins => %w{ table fullscreen }
