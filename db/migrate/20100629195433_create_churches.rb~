@@ -1,0 +1,16 @@
+class CreateChurches < ActiveRecord::Migration
+  def self.up
+    create_table :churches do |t|
+      t.string		:name
+      t.string		:church_type
+      t.text		:description
+      t.text		:history
+      t.string		:country
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :churches
+  end
+end

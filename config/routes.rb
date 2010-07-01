@@ -1,4 +1,8 @@
 Enda::Application.routes.draw do |map|
+  resources :churches
+
+  resources :groups
+
   resources :posts
 
   resources :users
